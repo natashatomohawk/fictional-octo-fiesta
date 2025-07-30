@@ -20,7 +20,7 @@ public:
         struct sockaddr_in server_addr;
         time_t endtime = time(NULL) + duration;
 
-        char payload[1024]; // Max random length
+        char payload[20]; // Max random length
         memset(&server_addr, 0, sizeof(server_addr));
         server_addr.sin_family = AF_INET;
         server_addr.sin_port = htons(port);
